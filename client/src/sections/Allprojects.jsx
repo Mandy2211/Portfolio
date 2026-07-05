@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import ProjectCard from "../components/ProjectCard";
+import { getProjects } from "../services/api";
 import "../styles/allprojects.css";
 
 // High-fidelity pixel-art paw SVG element matching the user's reference
@@ -53,8 +54,7 @@ function AllProjects() {
     useEffect(() => {
         async function fetchProjects() {
             try {
-                const response = await fetch("http://localhost:3000/api/projects");
-                const data = await response.json();
+                const data = await getProjects();
                 setProjects(Array.isArray(data) ? data : []);
             } catch (error) {
                 console.log(error);
