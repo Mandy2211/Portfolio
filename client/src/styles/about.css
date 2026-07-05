@@ -218,12 +218,10 @@
     max-width: 50%;
     padding: 25px 40px 35px 40px;
     border-radius: 16px;
-    /* Glassmorphism */
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 8px 32px 0 rgba(232, 160, 198, 0.15);
+    /* Solid Pink Background */
+    background: #ffd9eb;
+    border: 1px solid rgba(137, 207, 240, 0.8); /* Baby Blue border */
+    box-shadow: 0 8px 32px 0 rgba(137, 207, 240, 0.5); /* Baby Blue glow */
     align-items: center;
     margin-top: -30px;
     /* Overlaps the bottom of the girl PNG */
@@ -233,7 +231,7 @@
 }
 
 .aboutCard:hover {
-    box-shadow: 0 16px 48px rgba(255, 100, 180, 0.22);
+    box-shadow: 0 16px 48px rgba(137, 207, 240, 0.8); /* Stronger Baby Blue glow */
     transform: translateY(-4px);
 }
 
