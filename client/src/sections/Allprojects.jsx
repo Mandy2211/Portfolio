@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import ProjectCard from "../components/ProjectCard";
-import "../styles/allProjects.css";
+import "../styles/allprojects.css";
 
 // High-fidelity pixel-art paw SVG element matching the user's reference
 function PawIcon({ style, className }) {

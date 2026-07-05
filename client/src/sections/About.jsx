@@ -1,7 +1,7 @@
 import "../styles/about.css";
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
-import girl from "../assets/girl.png";
+import girl from "../assets/Girl.png";
 import moon from "../assets/moon.png";
 import cloud1 from "../assets/cloud1.png";
 import cloud2 from "../assets/cloud2.png";
