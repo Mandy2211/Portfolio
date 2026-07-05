@@ -1,0 +1,238 @@
+@keyframes pinkGradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.allProjects{
+    min-height:100vh;
+    padding:80px 40px;
+    background: linear-gradient(-45deg, #ffd9eb, #fbcddf, #ffe5d9, #ffdcc7);
+    background-size: 400% 400%;
+    animation: pinkGradientShift 12s ease infinite;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .allProjects {
+        padding: 60px 20px;
+    }
+}
+
+.allProjects h1{
+    font-size:4rem;
+    color:#1a0f1f;
+    text-shadow: 0 0 15px rgba(255, 79, 165, 0.4), 0 0 25px rgba(231, 179, 255, 0.3);
+}
+
+.allProjects p{
+    color:#4a3a4e;
+    margin-bottom:40px;
+}
+
+.backButton{
+    text-decoration:none;
+    color:#ff4f9a;
+    font-weight:bold;
+}
+
+.allProjects input{
+    width:100%;
+    max-width:500px;
+    padding:18px;
+    border:none;
+    border-radius:40px;
+    margin:40px 0;
+    font-size:17px;
+}
+
+.filters{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+}
+
+.filters button{
+    border:none;
+    background:white;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.filters .active{
+    background:#ff4d94;
+    color:white;
+}
+
+.allProjectsGrid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap:45px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .allProjectsGrid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+/* Override ProjectCard when inside AllProjects grid */
+.allProjectsGrid .featuredCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 35px 30px !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(12px) !important;
+    border-radius: 24px !important;
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05) !important;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.allProjectsGrid .featuredCard:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 25px 50px rgba(255, 77, 148, 0.2), 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.allProjectsGrid .featuredCard h2 {
+    font-size: 1.8rem !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+    color: #1a0f1f !important;
+}
+
+.allProjectsGrid .featuredCard p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+    color: #4a3a4e !important;
+    flex-grow: 1 !important;
+}
+
+.allProjectsGrid .featuredCard .stack {
+    margin: 20px 0 !important;
+    gap: 10px !important;
+}
+
+.allProjectsGrid .featuredCard .stack span {
+    font-size: 0.85rem !important;
+    padding: 6px 14px !important;
+    background: white !important;
+    color: #ff4d94 !important;
+}
+
+.allProjectsGrid .featuredCard a.githubLink {
+    margin-top: auto !important;
+    align-self: stretch !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    padding: 12px 25px !important;
+}
+
+.allProjectsGrid .featuredCard .featuredTag {
+    font-size: 0.8rem !important;
+    padding: 6px 15px !important;
+    margin-bottom: 15px !important;
+    align-self: flex-start !important;
+}
+
+.allProjectsGrid .featuredCard .learningsContainer {
+    margin-top: 20px !important;
+    padding-top: 15px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.allProjectsGrid .featuredCard .learningsHeading {
+    font-size: 1.05rem !important;
+    color: #1a0f1f !important;
+}
+
+.allProjectsGrid .featuredCard .learningsText {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+}
+
+/* Interactive Paw Containers and Animation Classes */
+.paw-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Background floating paws */
+.floating-paw {
+    position: fixed;
+    bottom: -50px;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1;
+    animation: floatPaw 12s linear infinite;
+    filter: drop-shadow(0 4px 8px rgba(255, 77, 148, 0.15));
+}
+
+@keyframes floatPaw {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.6);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.35;
+    }
+    90% {
+        opacity: 0.35;
+    }
+    100% {
+        transform: translateY(-115vh) rotate(360deg) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Click interactive stamp paws */
+.click-paw {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+    z-index: 5;
+    animation: clickPawEffect 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    filter: drop-shadow(0 6px 12px rgba(255, 77, 148, 0.3));
+}
+
+@keyframes clickPawEffect {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(-15deg);
+        opacity: 0;
+    }
+    20% {
+        transform: translate(-50%, -50%) scale(1.2) rotate(10deg);
+        opacity: 1;
+    }
+    40% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -60px) scale(0.7) rotate(15deg);
+        opacity: 0;
+    }
+}

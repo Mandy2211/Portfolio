@@ -1,0 +1,77 @@
+.gridCard{
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.35s;
+
+    border:2px solid rgba(255,255,255,.4);
+
+}
+
+.gridCard:hover{
+
+    transform:
+
+    translateY(-10px)
+
+    scale(1.02);
+
+}
+
+.gridCard h2{
+
+    color:#ff418e;
+
+    margin-bottom:20px;
+
+}
+
+.gridCard p{
+
+    line-height:1.7;
+
+    color:#555;
+
+}
+
+.chips{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin:25px 0;
+
+}
+
+.chips span{
+
+    background:white;
+
+    padding:8px 16px;
+
+    border-radius:20px;
+
+    color:#ff418e;
+
+    font-size:14px;
+
+}
+
+.gridCard a{
+
+    text-decoration:none;
+
+    color:#ff418e;
+
+    font-weight:bold;
+
+}
