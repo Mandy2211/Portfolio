@@ -130,4 +130,27 @@
     line-height: 1.7;
     color: #4a3a4e !important;
     margin: 0;
+}@media (max-width: 768px) {
+    .projects {
+        padding: 40px 5% 60px;
+    }
+    .projectHeading {
+        font-size: 2.5rem;
+    }
+    .featuredCard {
+        width: 95%;
+        padding: 30px 20px;
+    }
+    .featuredCard h2 {
+        font-size: 2rem;
+        word-wrap: break-word;
+    }
+    .featuredTag {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+    .stack span {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
 }

@@ -454,3 +454,30 @@ body {
     background: linear-gradient(rgba(241, 160, 216, 0),
             #e7b3ff);
 }
+@media (max-width: 768px) {
+    .girl {
+        width: 90%;
+        margin-top: 350px;
+    }
+    .intro-overlay {
+        margin-top: 50px;
+    }
+    .intro-overlay h1 {
+        font-size: 2.8rem;
+    }
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    .aboutCard {
+        width: 90%;
+        max-width: 90%;
+        padding: 20px;
+    }
+    .aboutCard p {
+        font-size: 0.95rem;
+    }
+    .buttons button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}

@@ -57,37 +57,38 @@ function About() {
                 {/* Background Layer: Girl */}
                 <div className="girlContainer">
                     <img src={girl} className="girl" alt="girl" />
+
+                    {/* Foreground Layer: Text, Card, Buttons */}
+                    <div className="intro-overlay">
+                        {/* Stacked Title */}
+                        <h1>Manini Rajbhar</h1>
+
+                        <h3 className="subtitle">
+                            CS Undergrad (2027) · ML Engineer · Full-Stack Developer ·<br />
+                            Open to Internships & Full-Time Roles
+                        </h3>
+
+                    </div>
                 </div>
 
-                {/* Foreground Layer: Text, Card, Buttons */}
-                <div className="intro-overlay">
-                    {/* Stacked Title */}
-                    <h1>Manini Rajbhar</h1>
+                <div className="aboutCard">
+                    <p>Hi! I'm Manini, architecting intelligent systems across RAG pipelines,
+                        distributed backends, and scalable APIs. Currently at IIIT Vadodara.
+                        Available for opportunities.
+                    </p>
+                </div>
 
-                    <h3 className="subtitle">
-                        CS Undergrad (2027) · ML Engineer · Full-Stack Developer ·<br />
-                        Open to Internships & Full-Time Roles
-                    </h3>
-
-                    <div className="aboutCard">
-                        <p>Hi! I'm Manini, architecting intelligent systems across RAG pipelines,
-                            distributed backends, and scalable APIs. Currently at IIIT Vadodara.
-                            Available for opportunities.
-                        </p>
-                    </div>
-
-                    <div className="buttons">
-                        <button
-                            onClick={() => window.open("https://drive.google.com/file/d/1gKLUd4nue2tObrhV8PGvrdiw9QSuqG8h/view?usp=sharing", "_blank")}
-                        >
-                            <font color="Black">View Resume </font>
-                        </button>
-                        <button
-                            onClick={() => window.open("https://www.linkedin.com/in/manini2205/", "_blank")}
-                        >
-                            <font color="Black">Connect</font>
-                        </button>
-                    </div>
+                <div className="buttons">
+                    <button
+                        onClick={() => window.open("https://drive.google.com/file/d/1gKLUd4nue2tObrhV8PGvrdiw9QSuqG8h/view?usp=sharing", "_blank")}
+                    >
+                        <font color="Black">View Resume </font>
+                    </button>
+                    <button
+                        onClick={() => window.open("https://www.linkedin.com/in/manini2205/", "_blank")}
+                    >
+                        <font color="Black">Connect</font>
+                    </button>
                 </div>
 
                 {/* Bottom Scroll Indicator */}
