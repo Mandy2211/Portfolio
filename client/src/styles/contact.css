@@ -1,6 +1,6 @@
 .contact {
-    min-height: 100vh;
-    padding: 120px 0;
+    min-height: auto;
+    padding: 120px 0 60px 0; /* Reduced bottom padding */
     background-color: #70A753;
     /* Matches projects bottom color exactly */
     display: flex;

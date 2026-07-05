@@ -67,3 +67,22 @@
     color:#ff4fa5;
 
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .navbar ul {
+        gap: 12px;
+    }
+    
+    .navbar li {
+        font-size: 0.85rem;
+    }
+}
